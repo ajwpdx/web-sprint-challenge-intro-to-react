@@ -14,6 +14,7 @@ const StyledCharacter = styled.div`
     .movie-list{
         display: flex;
         margin: 2%;
+        flex-wrap: wrap;
     }
 
 
@@ -34,7 +35,7 @@ const Character = props => {
             </div>
             <div className= 'movie-list'>
             {info.films.map(star => {
-          return <Movie key={star} info={star} />
+          return <Movie key={star} info={star.slice(27,28)} />
         })}
             </div>
             
