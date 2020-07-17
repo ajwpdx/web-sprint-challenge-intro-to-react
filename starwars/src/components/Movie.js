@@ -14,29 +14,16 @@ const StyledMovie = styled.div`
 
 const Movie = props => {
 
-    const { star } = props
-    const [movie, setMovie] = useState('movie')
+    const { info } = props
 
 
-    if (star === "1") {
-        return setMovie("A New Hope")
-    } else if (star === "2") {
-        setMovie("Empire Strikes Back")
-    } else if (star === "3") {
-        setMovie("Return of the Jedi")
-    } else if (star === "4") {
-        setMovie("The Phantom Menace")
-    } else if (star === "5") {
-        setMovie("Attack of the Clones")
-    } else if (star === "6") {
-        setMovie("Revenge of the Sith")
-    }
-
+    //just added
+    const movies = ["A New Hope","Empire Strikes Back","Return of the Jedi","The Phantom Menace","Attack of the Clones","Revenge of the Sith"]
 
     return (
 
         <StyledMovie>
-            <h3>{movie}</h3>
+            <h3>{movies[parseInt(info)-1]}</h3>
         </StyledMovie>
 
     )
